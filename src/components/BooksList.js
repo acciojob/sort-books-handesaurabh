@@ -3,10 +3,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchBooks, setSortBy, setSortOrder } from '../actions/booksActions';
 
 const BooksList = () => {
+  console.log('BooksList component rendering');
   const dispatch = useDispatch();
   const { books, loading, error, sortBy, sortOrder } = useSelector(state => state);
 
   useEffect(() => {
+    console.log('BooksList useEffect called');
     dispatch(fetchBooks());
   }, [dispatch]);
 
@@ -39,6 +41,8 @@ const BooksList = () => {
       return 0;
     }
   });
+  
+  console.log('Sorted books length:', sortedBooks.length, 'First book title:', sortedBooks[0]?.title);
 
   if (loading) {
     return <div>Loading books...</div>;
