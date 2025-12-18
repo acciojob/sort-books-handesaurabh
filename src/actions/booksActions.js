@@ -62,12 +62,13 @@ export const fetchBooks = () => {
       const mockBooks = [];
       
       console.log('Generating mock books');
-      // Generate exactly 60 unique books
+      // Generate exactly 60 unique books with properly sortable titles
       for (let i = 0; i < 60; i++) {
+        const num = (i + 1).toString().padStart(2, '0'); // Pad with zeros for proper sorting
         mockBooks.push({
-          title: `Book Title ${i + 1}`,
-          author: `Author ${i + 1}`,
-          publisher: `Publisher ${i + 1}`,
+          title: `Book Title ${num}`,
+          author: `Author ${num}`,
+          publisher: `Publisher ${num}`,
           isbn: `978-${1000000000 + i}`
         });
       }
