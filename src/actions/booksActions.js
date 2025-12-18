@@ -70,6 +70,7 @@ export const fetchBooks = () => {
         });
       }
       
+      console.log('Dispatching', mockBooks.length, 'books');
       dispatch(fetchBooksSuccess(mockBooks));
     }
   };

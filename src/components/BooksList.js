@@ -30,9 +30,13 @@ const BooksList = () => {
     }
 
     if (sortOrder === 'asc') {
-      return aValue > bValue ? 1 : -1;
+      if (aValue < bValue) return -1;
+      if (aValue > bValue) return 1;
+      return 0;
     } else {
-      return aValue < bValue ? 1 : -1;
+      if (aValue > bValue) return -1;
+      if (aValue < bValue) return 1;
+      return 0;
     }
   });
 

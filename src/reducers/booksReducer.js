@@ -16,6 +16,7 @@ const booksReducer = (state = initialState, action) => {
       };
     
     case 'FETCH_BOOKS_SUCCESS':
+      console.log('Setting books in reducer, length:', action.payload.length);
       return {
         ...state,
         loading: false,
