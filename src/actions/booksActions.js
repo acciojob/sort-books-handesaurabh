@@ -32,6 +32,7 @@ export const setSortOrder = (sortOrder) => ({
 
 // Thunk Action for fetching books
 export const fetchBooks = () => {
+  console.log('fetchBooks action called');
   return async (dispatch) => {
     dispatch(fetchBooksRequest());
     
@@ -60,6 +61,7 @@ export const fetchBooks = () => {
       // Mock data for demonstration - generate exactly 60 books
       const mockBooks = [];
       
+      console.log('Generating mock books');
       // Generate exactly 60 unique books
       for (let i = 0; i < 60; i++) {
         mockBooks.push({
