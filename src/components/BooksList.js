@@ -9,8 +9,11 @@ const BooksList = () => {
 
   useEffect(() => {
     console.log('BooksList useEffect called');
-    dispatch(fetchBooks());
-  }, [dispatch]);
+    // Only fetch books if we don't already have them
+    if (books.length === 0) {
+      dispatch(fetchBooks());
+    }
+  }, [dispatch, books.length]);
 
   const handleSortByChange = (e) => {
     dispatch(setSortBy(e.target.value));
