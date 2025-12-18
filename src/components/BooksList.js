@@ -8,12 +8,16 @@ const BooksList = () => {
   const { books, loading, error, sortBy, sortOrder } = useSelector(state => state);
 
   useEffect(() => {
-    console.log('BooksList useEffect called');
+    console.log('BooksList useEffect called', books.length);
     // Only fetch books if we don't already have them
-    if (books.length === 0) {
+    // Use a more robust check to prevent multiple fetches
+    if (books.length === 0 && !loading) {
+      console.log('Fetching books');
       dispatch(fetchBooks());
+    } else if (books.length > 0) {
+      console.log('Books already loaded, skipping fetch');
     }
-  }, [dispatch, books.length]);
+  }, [dispatch, books.length, loading]);
 
   const handleSortByChange = (e) => {
     dispatch(setSortBy(e.target.value));

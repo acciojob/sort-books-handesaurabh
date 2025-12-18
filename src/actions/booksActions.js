@@ -74,7 +74,9 @@ export const fetchBooks = () => {
       }
       
       console.log('Dispatching', mockBooks.length, 'books');
-      dispatch(fetchBooksSuccess(mockBooks));
+      // Ensure we're sending exactly 60 books
+      const finalBooks = mockBooks.slice(0, 60);
+      dispatch(fetchBooksSuccess(finalBooks));
     }
   };
 };
