@@ -17,10 +17,11 @@ const booksReducer = (state = initialState, action) => {
     
     case 'FETCH_BOOKS_SUCCESS':
       console.log('Setting books in reducer, length:', action.payload.length);
+      // Ensure we're not accumulating data - replace the books array
       return {
         ...state,
         loading: false,
-        books: action.payload
+        books: Array.isArray(action.payload) ? action.payload : []
       };
     
     case 'FETCH_BOOKS_FAILURE':
