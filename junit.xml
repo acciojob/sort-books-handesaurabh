@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="5" time="7.095">
+  <testsuite name="BooksList" errors="0" failures="5" skipped="0" timestamp="2025-12-18T11:40:25" time="4.132" tests="5">
+    <testcase classname="BooksList should render the header with title &quot;Books List&quot;" name="BooksList should render the header with title &quot;Books List&quot;" time="0.003">
+      <failure>ReferenceError: cy is not defined
+    at Object.&lt;anonymous&gt; (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\cypress\integration\tests\test.spec.js:3:5)
+    at Object.asyncJestTest (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="BooksList should render the &quot;sort by&quot; dropdown" name="BooksList should render the &quot;sort by&quot; dropdown" time="0.001">
+      <failure>ReferenceError: cy is not defined
+    at Object.&lt;anonymous&gt; (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\cypress\integration\tests\test.spec.js:8:5)
+    at Object.asyncJestTest (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="BooksList should render the &quot;order&quot; dropdown" name="BooksList should render the &quot;order&quot; dropdown" time="0">
+      <failure>ReferenceError: cy is not defined
+    at Object.&lt;anonymous&gt; (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\cypress\integration\tests\test.spec.js:14:5)
+    at Object.asyncJestTest (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="BooksList should render the table with book data" name="BooksList should render the table with book data" time="0.001">
+      <failure>ReferenceError: cy is not defined
+    at Object.&lt;anonymous&gt; (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\cypress\integration\tests\test.spec.js:20:5)
+    at Object.asyncJestTest (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+    <testcase classname="BooksList should render the book data in sorted order by title by default" name="BooksList should render the book data in sorted order by title by default" time="0.001">
+      <failure>ReferenceError: cy is not defined
+    at Object.&lt;anonymous&gt; (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\cypress\integration\tests\test.spec.js:25:5)
+    at Object.asyncJestTest (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at C:\Users\SAURABH\Downloads\sort-books-handesaurabh-master\sort-books-handesaurabh-master\node_modules\jest-jasmine2\build\queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

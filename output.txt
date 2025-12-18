@@ -1,0 +1,88 @@
+FAIL cypress/integration/tests/test.spec.js
+  BooksList
+    × should render the header with title "Books List" (3 ms)
+    × should render the "sort by" dropdown (1 ms)
+    × should render the "order" dropdown
+    × should render the table with book data (1 ms)
+    × should render the book data in sorted order by title by default (1 ms)
+
+  ● BooksList › should render the header with title "Books List"
+
+    ReferenceError: cy is not defined
+
+      1 | describe('BooksList', () => {
+      2 |   it('should render the header with title "Books List"', () => {
+    > 3 |     cy.visit('http://localhost:8088/')
+        |     ^
+      4 |     cy.get('h1').should('have.text', 'Books List')
+      5 |   })
+      6 |
+
+      at Object.<anonymous> (cypress/integration/tests/test.spec.js:3:5)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  ● BooksList › should render the "sort by" dropdown
+
+    ReferenceError: cy is not defined
+
+       6 |
+       7 |   it('should render the "sort by" dropdown', () => {
+    >  8 |     cy.visit('http://localhost:8088/')
+         |     ^
+       9 |     cy.get(':nth-child(1) > select').should('exist')
+      10 |     cy.get(':nth-child(1) > select > option').should('have.length', 3)
+      11 |   })
+
+      at Object.<anonymous> (cypress/integration/tests/test.spec.js:8:5)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  ● BooksList › should render the "order" dropdown
+
+    ReferenceError: cy is not defined
+
+      12 |
+      13 |   it('should render the "order" dropdown', () => {
+    > 14 |     cy.visit('http://localhost:8088/')
+         |     ^
+      15 |     cy.get(':nth-child(2) > select').should('exist')
+      16 |     cy.get(':nth-child(2) > select > option').should('have.length', 2)
+      17 |   })
+
+      at Object.<anonymous> (cypress/integration/tests/test.spec.js:14:5)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  ● BooksList › should render the table with book data
+
+    ReferenceError: cy is not defined
+
+      18 |
+      19 |   it('should render the table with book data', () => {
+    > 20 |     cy.visit('http://localhost:8088/')
+         |     ^
+      21 |     cy.get('tbody > tr').should('have.length', 60)
+      22 |   })
+      23 |
+
+      at Object.<anonymous> (cypress/integration/tests/test.spec.js:20:5)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  ● BooksList › should render the book data in sorted order by title by default
+
+    ReferenceError: cy is not defined
+
+      23 |
+      24 |   it('should render the book data in sorted order by title by default', () => {
+    > 25 |     cy.visit('http://localhost:8088/')
+         |     ^
+      26 |     cy.get('tbody > tr').eq(0).find('td').eq(0).should('exist')
+      27 |   })
+      28 | })
+
+      at Object.<anonymous> (cypress/integration/tests/test.spec.js:25:5)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 5 total
+Snapshots:   0 total
+Time:        7.094 s
+Ran all test suites.

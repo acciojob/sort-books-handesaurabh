@@ -45,7 +45,7 @@ const BooksList = () => {
     }
   });
   
-  console.log('Sorted books length:', sortedBooks.length, 'First book title:', sortedBooks[0]?.title, 'Sort by:', sortBy, 'Sort order:', sortOrder);
+  console.log('Sorted books length:', sortedBooks.length, 'First book title:', sortedBooks[0] ? sortedBooks[0].title : 'N/A', 'Sort by:', sortBy, 'Sort order:', sortOrder);
 
   if (loading) {
     return <div>Loading books...</div>;
