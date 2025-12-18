@@ -1,6 +1,6 @@
 describe('BooksList', () => {
   it('should render the header with title "Books List"', () => {
-    cy.visit('http://localhost:8080/')
+    cy.visit('http://localhost:8086/')
     cy.get('h1').should('have.text', 'Books List')
   })
 
