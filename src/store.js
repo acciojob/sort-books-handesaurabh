@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import booksReducer from '../reducers/booksReducer';
+import booksReducer from './reducers/booksReducer';
 
 const store = createStore(
   booksReducer,
