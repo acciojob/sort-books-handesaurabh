@@ -5,19 +5,19 @@ import { fetchBooks, setSortBy, setSortOrder } from '../actions/booksActions';
 const BooksList = () => {
   console.log('BooksList component rendering');
   const dispatch = useDispatch();
-  const { books, loading, error, sortBy, sortOrder } = useSelector(state => state);
+  const { books, loading, error, sortBy, sortOrder, fetched } = useSelector(state => state);
 
   useEffect(() => {
     console.log('BooksList useEffect called', books.length);
-    // Only fetch books if we don't already have them
-    // Use a more robust check to prevent multiple fetches
-    if (books.length === 0 && !loading) {
+    // Only fetch books if we haven't fetched them yet
+    // Use the fetched flag to prevent multiple fetches
+    if (!fetched && !loading) {
       console.log('Fetching books');
       dispatch(fetchBooks());
-    } else if (books.length > 0) {
-      console.log('Books already loaded, skipping fetch');
+    } else if (fetched) {
+      console.log('Books already fetched, skipping fetch');
     }
-  }, [dispatch, books.length, loading]);
+  }, [dispatch, fetched, loading]);
 
   const handleSortByChange = (e) => {
     dispatch(setSortBy(e.target.value));
@@ -48,7 +48,7 @@ const BooksList = () => {
       return 0;
     }
   });
-  
+
   console.log('Sorted books length:', sortedBooks.length, 'First book title:', sortedBooks[0] ? sortedBooks[0].title : 'N/A', 'Last book title:', sortedBooks[sortedBooks.length - 1] ? sortedBooks[sortedBooks.length - 1].title : 'N/A', 'Sort by:', sortBy, 'Sort order:', sortOrder);
 
   if (loading) {
@@ -62,7 +62,7 @@ const BooksList = () => {
   return (
     <div>
       <h1>Books List</h1>
-      
+
       <div>
         <label>
           Sort by:
@@ -72,7 +72,7 @@ const BooksList = () => {
             <option value="publisher">Publisher</option>
           </select>
         </label>
-        
+
         <label>
           Order:
           <select onChange={handleSortOrderChange} value={sortOrder}>
@@ -81,7 +81,7 @@ const BooksList = () => {
           </select>
         </label>
       </div>
-      
+
       <table>
         <thead>
           <tr>
