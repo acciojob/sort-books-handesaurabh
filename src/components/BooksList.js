@@ -86,6 +86,9 @@ const BooksList = () => {
         <thead>
           <tr>
             <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>ISBN</th>
           </tr>
         </thead>
         <tbody>
@@ -96,6 +99,7 @@ const BooksList = () => {
           ))}
         </tbody>
       </table>
+
     </div>
   );
 };
