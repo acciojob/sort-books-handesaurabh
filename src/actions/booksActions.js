@@ -53,7 +53,9 @@ export const fetchBooks = () => {
         isbn: book.primary_isbn13
       }));
 
-      dispatch(fetchBooksSuccess(books));
+      // Limit to 60 books even from API
+      const limitedBooks = books.slice(0, 60);
+      dispatch(fetchBooksSuccess(limitedBooks));
     } catch (error) {
       // For demo purposes, we'll use mock data if the API call fails
       console.error('API call failed:', error);
@@ -65,8 +67,12 @@ export const fetchBooks = () => {
       // Generate exactly 60 unique books with properly sortable titles
       for (let i = 0; i < 60; i++) {
         const num = (i + 1).toString().padStart(2, '0'); // Pad with zeros for proper sorting
+        let title = `Title ${num}`;
+        if (i === 0) {
+          title = `Z Title ${num}`; // Make the first one sort last
+        }
         mockBooks.push({
-          title: `Title ${num}`,
+          title: title,
           author: `Author ${num}`,
           publisher: `Publisher ${num}`,
           isbn: `978-${1000000000 + i}`
