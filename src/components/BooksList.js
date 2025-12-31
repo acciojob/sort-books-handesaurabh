@@ -86,18 +86,12 @@ const BooksList = () => {
         <thead>
           <tr>
             <th>Title</th>
-            <th>Author</th>
-            <th>Publisher</th>
-            <th>ISBN</th>
           </tr>
         </thead>
         <tbody>
           {sortedBooks.map((book, index) => (
             <tr key={index}>
               <td>{book.title}</td>
-              <td>{book.author}</td>
-              <td>{book.publisher}</td>
-              <td>{book.isbn}</td>
             </tr>
           ))}
         </tbody>
